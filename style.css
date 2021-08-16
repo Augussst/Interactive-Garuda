@@ -1,0 +1,83 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body { 
+    margin: 0; 
+    min-height: 100vh; 
+    background-color: darkslategrey; 
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+}
+
+.grid-container {
+    display: grid;
+    padding: 0.5em;
+    height: 100vh;
+    min-height: 50vw;
+    background-color: white;
+    grid-template-columns: 3fr 2fr;
+}
+
+.grid-item {
+    background-color: darkslategrey;
+    margin: 0.125rem;
+    padding: 1rem;
+    padding-bottom: 4.4rem;
+    text-align: center;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1em;
+}
+
+h1 {
+    padding-bottom: 0.5em;
+}
+
+.garuda-container {
+    display: block;
+    position: relative;
+    border: 5px solid red;
+    margin: auto;
+    height: 100%;
+    font-size: 0.8vw;
+    /* font-size: clamp(1px calc(90vh / 48), calc(90vw / 48)); */
+    /* width: 100%; */
+}
+
+.partgaruda {
+    margin-bottom: 10vw;
+    height: auto;
+    width: 100%;
+    line-height: 50px;
+}
+
+.scale {
+    
+}
+
+.garuda-container>img { position: absolute; left: 50%; transform: translatex(-50%); }
+.garuda-container>img:nth-of-type(1) { top: 34.625em; width: 16.875em; }
+.garuda-container>img:nth-of-type(2) { top: 34.875em; width: 41.25em; }
+.garuda-container>img:nth-of-type(3) { top: 0em; width: 46.3125em; }
+.garuda-container>img:nth-of-type(4) { top: 29.375em; width: 28.375em; }
+.garuda-container>img:nth-of-type(5) { top: 10.3125em; left: calc(50% + 0.1em); width: 10.5em; }
+.garuda-container>img:nth-of-type(6) { top: 3.8125em; left: calc(50% - 1.2em); width: 11.875em; }
+
+.tameng-container { position: relative; }
+
+.tameng-container>img { position: absolute; }
+.tameng-container>img:nth-of-type(1) { top: 17.5625em; right: 50%; width: 7.8125em; }
+.tameng-container>img:nth-of-type(2) { top: 17.5625em; left: 50%; width: 7.8125em; }
+.tameng-container>img:nth-of-type(3) { top: 26.1875em; right: 50%; width: 7.8125em; }
+.tameng-container>img:nth-of-type(4) { top: 26.1875em; left: 50%; width: 7.8125em; }
+.tameng-container>img:nth-of-type(5) { top: 17.5625em; left: 50%; width: 15.75em; transform: translatex(-50%); pointer-events: none; }
+.tameng-container>img:nth-of-type(6) { top: 23.375em; left: 50%; z-index: 1; width: 5.9375em; transform: translatex(-50%); }
+
+
+.hoverable:hover {
+    filter: drop-shadow(0 0 1em white);
+}

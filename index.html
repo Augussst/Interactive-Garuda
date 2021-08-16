@@ -4,183 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
-    <style>
-      * {
-        box-sizing: border-box;
-        padding: 0px;
-        margin: 0px;
-      }
-      
-      .grid-container {
-        display: grid;
-        grid-template-columns: 2fr 2fr;
-      }
-
-      .garuda {
-        border: 5px solid red;
-        width: auto;
-        height: 100vh;
-        padding: 5%;
-        background-color: darkslategrey;
-        z-index: 0;
-      }
-
-      .garudafull {
-        position: absolute;
-        z-index: 3;
-        filter: drop-shadow(0 0 5rem red);
-        display: none;
-      }
-
-      img {
-        display: block;
-        zoom: 23%;
-        max-width: 100%;
-        height: auto;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      /* CUMA SAYAP YANG NGESCALE SAMA DIV */
-
-      .kepala {
-        position: relative;
-        left: -100px;
-        top: 280px;
-        z-index: 10;
-      }
-
-      .leher {
-        position: relative;
-        z-index: 7;
-        top: 150px;
-        /* left: -10px; */
-      }
-
-      .sayap {
-        position: relative;
-        z-index: 2;
-        top: -1130px;
-        /* left: -30px; */
-      }
-
-      .tameng {
-        position: relative;
-        z-index: 9;
-        top: -2160px;
-        /* left: -28px; */
-        pointer-events: none;
-      }
-
-      .bintang {
-        position: relative;
-        z-index: 10;
-        top: -4352px;
-        /* left: -30px; */
-      }
-
-      .banteng {
-        position: relative;
-        z-index: 8;
-        top: -3545px;
-        left: -278px;
-      }
-
-      .beringin {
-        position: relative;
-        z-index: 8;
-        top: -4160px;
-        left: 285px;
-      }
-
-      .padikapas {
-        position: relative;
-        z-index: 8;
-        top: -4752px;
-        left: -278px;
-      }
-
-      .rantai {
-        position: relative;
-        z-index: 8;
-        top: -5518px;
-        left: 285px;
-      }
-
-      .kaki {
-        position: relative;
-        z-index: 7;
-        top: -6040px;
-        /* left: -30px; */
-      }
-
-      .semboyan {
-        position: relative;
-        z-index: 6;
-        top: -6710px;
-        /* left: -30px; */
-      }
-
-      .ekor {
-        position: relative;
-        z-index: 5;
-        top: -7620px;
-        /* left: -30px; */
-      }
-
-      area {
-        cursor: default;
-        pointer-events: none;
-      }
-
-      .hoverable:hover {
-        filter: drop-shadow(0px 0px 50px white);
-      }
-    </style>
 </head>
 <body>
-  <div class="grid-container">
-    <div class="garuda grid-item grid-item-1">
-      <img class="kepala hoverable" src="kepala.png">
-      <img class="leher hoverable" src="leher.png" alt="">
-      <img class="sayap hoverable" src="sayap.png" usemap="#sayapmap" alt="">      
-      <img class="tameng" src="tameng.png" alt="">
-      <img class="banteng hoverable" src="banteng.png" alt="">
-      <img class="beringin hoverable" src="beringin.png" alt="">
-      <img class="bintang hoverable" src="bintang.png" alt="">
-      <img class="padikapas hoverable" src="padikapas.png" usemap="#padikapasmap" alt="">      
-      <img class="rantai hoverable" src="rantai.png" usemap="#rantaimap" alt="">
-      <img class="kaki hoverable" src="kaki.png" usemap="#kakimap" alt="">
-      <img class="semboyan hoverable" src="semboyan.png" usemap="#semboyanmap" alt="">
-      <img class="ekor hoverable" src="ekor.png" alt="">
+    <div class="grid-container">
+        <div class="grid-item">
+            <h1>Garuda&nbsp;Pancasila</h1>
+            <div class="garuda-container">
+                <img class="ekor hoverable partgaruda" src="img/ekor.png">
+                <img class="semboyan hoverable partgaruda" src="img/semboyan.png" alt="">
+                <img class="sayap hoverable partgaruda" src="img/sayap.png" usemap="#sayapmap" alt="">  
+                <img class="kaki hoverable partgaruda" src="img/kaki.png" usemap="#kakimap" alt="">
+                <img class="leher hoverable partgaruda" src="img/leher.png" usemap="#semboyanmap" alt="">
+                <img class="kepala hoverable partgaruda" src="img/kepala.png" alt="">
+                <div class="tameng-container">
+                    <img class="banteng hoverable partgaruda" src="img/banteng.png" alt="">
+                    <img class="beringin hoverable partgaruda" src="img/beringin.png" alt="">
+                    <img class="padikapas hoverable partgaruda" src="img/padikapas.png" alt="">
+                    <img class="rantai hoverable partgaruda" src="img/rantai.png" alt="">
+                    <img class="rameng partgaruda" src="img/tameng.png" usemap="#padikapasmap" alt="">      
+                    <img class="bintang hoverable partgaruda" src="img/bintang.png" usemap="#rantaimap" alt="">
+                </div>
+                <div class="scale"></div> 
+            </div> 
+        </div>
+        <div class="grid-item explainer">
+            <h1>Into this</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam recusandae nihil ducimus doloribus iusto quasi magni eveniet eaque, error, explicabo assumenda ab provident odit sit, beatae id quisquam voluptatum in?</p>
+        </div>
     </div>
-    <div class="grid-item grid-item-2">
 
-    </div>
-
-    <map name="sayapmap">
-      <area coords="271,0,391,559,968,931,1311,1151,1961,1165,2324,931,2778,717,2989,448,3042,0,2740,0,2497,3" shape="poly">
-      <area coords="-1,1332,81,1581,183,1818,248,1918,327,2038,497,2173,705,2275,-1,2275" shape="poly">
-      <area coords="3312,1306,3276,1493,3209,1698,3077,1915,2928,2102,2726,2231,2632,2275,3315,2272" shape="poly">
-    </map>
-    <map name="padikapasmap">
-      <area coords="3,198,1,765,561,765,408,721,225,600,118,480,37,340" shape="poly">
-    </map>
-    <map name="rantaimap">
-      <area coords="6,765,68,748,144,720,225,675,302,619,373,561,437,488,486,412,537,300,564,183,563,765" shape="poly">
-    </map>
-    <map name="kakimap">
-      <area coords="1557,0,1591,122,1648,211,1725,327,1730,390,1713,475,1725,572,1790,686,1898,768,1981,825,2027,862,2027,3" shape="poly">
-      <area coords="4,3,483,0,434,120,380,211,306,327,298,387,320,532,238,669,150,760,67,805,-1,879" shape="poly">
-      <area coords="748,364,733,413,694,450,679,512,565,555,466,598,366,723,357,771,400,831,412,905,352,951,286,899,224,951,224,1050,1802,1050,1804,948,1739,894,1636,942,1599,817,1653,723,1531,575,1357,549,1334,458,1269,370" shape="poly">
-    </map>
-    <map name="semboyanmap">
-      <area coords="152,0,309,124,421,274,492,236,604,298,998,572,1447,676,1816,613,2178,431,2431,236,2530,257,2680,87,2825,0,1468,0,529,0" shape="poly">
-      <area coords="-2,224,122,307,301,539,434,501,849,767,1202,883,1750,887,2036,796,2315,651,2535,485,2647,539,2813,327,2954,211,2954,887,-2,887" shape="poly">
-    </map>
-
-  </div>
-    <img class="garudafull" src="garudapancasila.png">   
+    
 </body>
 </html>
